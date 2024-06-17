@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/loja.css" />
+
+    <title>Hello, world!</title>
+  </head>
+
+  <body>
+    <header class="d-flex justify-content-between py-3">
+      <a href="../index.html"
+        ><img
+          src="../web/Logo.svg"
+          alt="Gato amarelo com chapéu roxo, nome da empresa Paws & Clues."
+      /></a>
+      <nav>
+        <a class="nav-item purple-text" href="./produtos.html"
+          ><img src="../web/prod-icon.svg" /> Produtos</a
+        >
+        <a class="nav-item purple-text" href="./servicos.html"
+          ><img src="../web/serv-icon.svg" /> Serviços</a
+        >
+        <a
+          class="nav-item purple-text"
+          href="../html/form/cadastro_cliente.html"
+          ><img src="../web/profile.svg" /> Perfil</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <script src="../js/modal.js"></script>
+      <div class="modal">
+        <button class="close-btn" onclick="fecharModal()">&times;</button>
+        <div class="content">
+          <div class="modal-img"></div>
+          <div class="modal-text">
+            <span class="tag"></span>
+            <h2 class="modal-title"></h2>
+            <p class="modal-desc"></p>
+            <div class="modal-foot">
+              <p class="modal-price"></p>
+              <button class="btn purple cta-btn">Agendar Agora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="board">
+        <div class="search-bar mt-1">
+          <input type="text" placeholder="O que seu pet precisa?" />
+        </div>
+        <h3 class="purple-text text-center mb-4">Destaques:</h3>
+        <div class="container">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide mb-5"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner" style="height: 20em">
+              <div
+                class="carousel-item h-100 active"
+                style="
+                  background: url(../web/cards/card-01.png) center/contain
+                    no-repeat;
+                "
+              ></div>
+              <div
+                class="carousel-item h-100"
+                style="
+                  background: url(../web/cards/card-02.png) center/contain
+                    no-repeat;
+                "
+              ></div>
+              <div
+                class="carousel-item h-100"
+                style="
+                  background: url(../web/cards/card-03.png) center/contain
+                    no-repeat;
+                "
+              ></div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <h3 class="purple-text text-center">Nossos produtos:</h3>
+        <div class="products">
+          <button class="product" onclick="abrirModal('pucpet-gatos-5kg')">
+            <img
+              src="../web/produto-pucpet.png"
+              alt="PucPet gatos castrados 5kg"
+            />
+            <span class="tag">Ração seca</span>
+            <h2>PucPet gatos castrados 5Kg</h2>
+            <p class="price">
+              <span class="purple-text">R$</span>68<span>,92</span>
+            </p>
+          </button>
+          <button
+            class="product"
+            onclick="abrirModal('puche-gatos-filhotes-250g')"
+          >
+            <img
+              src="../web/produto-puche.png"
+              alt="PuChê gatos filhotes 250g"
+            />
+            <span class="tag">Ração úmida</span>
+            <h2>PuChê gatos filhotes 250g</h2>
+            <p class="price">
+              <span class="purple-text">R$</span>03<span>,55</span>
+            </p>
+          </button>
+          <button class="product" onclick="abrirModal('pucpet-gatos-1kg')">
+            <img
+              src="../web/produto-pucpet.png"
+              alt="PucPet gatos castrados 1kg"
+            />
+            <span class="tag">Ração seca</span>
+            <h2>PucPet gatos castrados 1Kg</h2>
+            <p class="price">
+              <span class="purple-text">R$</span>14<span>,21</span>
+            </p>
+          </button>
+        </div>
+        <footer class="d-flex align-items-center justify-content-center">
+          <span class="purple-text"
+            >&copy; Paws&Clues 2024. Todos os direitos reservados.</span
+          >
+        </footer>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
